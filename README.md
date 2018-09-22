@@ -26,7 +26,7 @@ The last thing you need to do is compile and run the file in the command prompt.
 
 These are all the methods available to you and a brief description of what they do.
 
-**General**
+**------------------------------------------------General------------------------------------------------**
 
 **setPort(string)** - Sets the computer port where the arduino is connected to the computer.
 
@@ -36,7 +36,7 @@ These are all the methods available to you and a brief description of what they 
 
 **close()** - Closes the connection when you're done with using the robot. Should be done at the end of every program.
 
-**Sensors**
+**------------------------------------------------Sensors------------------------------------------------**
 
 **refreshAnalogPins()** - Should be ran before calling the values from any analog pins.
 
@@ -52,7 +52,7 @@ These are all the methods available to you and a brief description of what they 
 
 **getIRChar()** - Returns the IR char detected by the IR sensor. Sensor must be connected to D4.
 
-**Movement**
+**------------------------------------------------Movement------------------------------------------------**
 
 **runPCAServo(int channel, int position)** - Runs a 180 servo connected on a specific **channel** to a specific **position**.
 
