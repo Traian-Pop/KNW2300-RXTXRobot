@@ -1,4 +1,5 @@
-// This example shows how to move only one DC encoded motor.  The motor will run for the specific number of ticks, which pauses the execution of the program until the motor stops.
+// This example shows how to move with encoders.
+
 import rxtxrobot.*;
 
 public class RunEncodedMotor
@@ -8,9 +9,12 @@ public class RunEncodedMotor
 		RXTXRobot r = new ArduinoNano(); // Create RXTXRobot object
 		r.setPort("COM3"); // Set port to COM3
 		r.connect();
-		r.runEncodedMotor(RXTXRobot.MOTOR1, 255, 100); // Run motor 1 forward (speed of 255) for 100,000 ticks
-		// Program stops until the command above is completed
-		r.runEncodedMotor(RXTXRobot.MOTOR1, -255, 100); // Run motor 1 backward (speed of 255) for 100,000 ticks
+		
+		//Run motor on channel 0 at speed 300 for 1000 ticks from encoder on pin 2
+		r.runPCAEncoder(0, 300, 2, 1000);
+
+		//Prints out the number of ticks from a certain encoder connected to a motor on channel 1
+		System.out.println(r.getPCAEncodedMotorsTicks(1);
 		r.close();
 	}
 }

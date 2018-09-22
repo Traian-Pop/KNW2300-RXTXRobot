@@ -68,7 +68,7 @@ These are all the methods available to you and a brief description of what they 
 
 **runPCAEncoder(int channel, int speed, int pin, int ticks)** - Runs an encoder on **pin** connected to a motor on **channel** at **speed** for **ticks**.
 
-**runTwoPCAEncoder(int channel1, int speed1, int pin1, int ticks1, int channel2, int speed2, int pin2, int ticks2)** - Runs two encoders on **pin1** and ** pin2** connected to motors on **channel1** and **channel2** at **speed1** and **speed2** for **ticks1** and **ticks2** respectively.
+**runTwoPCAEncoder(int channel1, int speed1, int pin1, int ticks1, int channel2, int speed2, int pin2, int ticks2)** - Runs two encoders on **pin1** and **pin2** connected to motors on **channel1** and **channel2** at **speed1** and **speed2** for **ticks1** and **ticks2** respectively.
 
 **getPCAEncodedMotorsTicks(int channel)** - Returns the ticks from motor on **channel**.
 
