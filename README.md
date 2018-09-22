@@ -29,32 +29,51 @@ These are all the methods available to you and a brief description of what they 
 **General**
 
 **setPort(string)** - Sets the computer port where the arduino is connected to the computer.
+
 **setVerbose(boolean)** - Turn on/off the full detailed output of the program, shows you more detail about what the arduino is doing.
+
 **connect()** - Attempts to connect to the arduino at the port you set earlier.
+
 **close()** - Closes the connection when you're done with using the robot. Should be done at the end of every program.
 
 **Sensors**
 
 **refreshAnalogPins()** - Should be ran before calling the values from any analog pins.
+
 **refreshDigitalPins()** - Should be ran before calling the values from any digital pins. 
+
 **getAnalogPin(int)** - Returns the value from the specific pin called.
+
 **getDigitalPin(int)** - Returns the value from the specific pin called. 
+
 **getPing(int)** - Returns the value from the ping sensor at the specified pin. 
+
 **getConductivity()** - Returns the value of the conductivity sensor if properly connected. Sensor should be connected to A2, A3, D12, D13.
+
 **getIRChar()** - Returns the IR char detected by the IR sensor. Sensor must be connected to D4.
 
 **Movement**
 
 **runPCAServo(int channel, int position)** - Runs a 180 servo connected on a specific **channel** to a specific **position**.
+
 **runPCATimedServo(int channel, int position, int duration)** - Runs a 180 servo connected on a specific **channel** to a specific **position** for **duration** milliseconds.
+
 **runPCAContServo(int channel, int speed)** - Runs a continuous servo connected on a specific **channel** at a specific **speed**.
+
 **runPCATimedContServo(int channel, int speed, int duration)** - Runs a continuous servo connected on a specific **channel** at a specific **speed** for **duration** milliseconds.
+
 **runPCAMotor(int channel, int speed, int time)** - Runs a DC motor connected on a specific **channel** at a specific **speed** for **time** milliseconds. If time is zero, it runs infinitely.
+
 **runTwoPCAMotor(int channel1, int speed1, int channel2, int speed2 int time)** - Runs two DC motors connected on **channel1** and **channel2** at the speeds of **speed1** and **speed2** for **time** milliseconds, respectively. If time is zero, it runs infinitely. 
+
 **runPCAEncoder(int channel, int speed, int pin, int ticks)** - Runs an encoder on **pin** connected to a motor on **channel** at **speed** for **ticks**.
+
 **runTwoPCAEncoder(int channel1, int speed1, int pin1, int ticks1, int channel2, int speed2, int pin2, int ticks2)** - Runs two encoders on **pin1** and ** pin2** connected to motors on **channel1** and **channel2** at **speed1** and **speed2** for **ticks1** and **ticks2** respectively.
+
 **getPCAEncodedMotorsTicks(int channel)** - Returns the ticks from motor on **channel**.
+
 **channelPCAStop(int channel)** - Stops the motor runnning on **channel**.
+
 **allPCAStop()** - Stops all the motors running on every channel.
 
 
