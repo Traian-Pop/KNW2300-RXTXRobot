@@ -9,9 +9,13 @@ Installation:
 
 	3) Double click the "install" program and follow any onscreen instructions.
 
-	4) Add the JAR file, located in the same folder as this README file, to your IDE project.
+	4) Go to http://lyle.smu.edu/fyd/downloads.php, and download the latest stable
+	   release of the RXTXRobot JAR.
 
-	5) Add "import rxtxrobot.*" at the top of your Java files.
+	5) Add the JAR to your IDE project.
+
+	6) Add "import rxtxrobot.*" at the top of your Java files.
+
 
 NOTE: If you are running Windows 8 or 8.1, and the installer fails to run, read the following section. Otherwise, continue to the Installation section.
 
