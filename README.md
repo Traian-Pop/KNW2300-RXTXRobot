@@ -22,11 +22,11 @@ After running your respective installation file, proceed to make your intended p
 
 The last thing you need to do is compile and run the file in the command prompt. Let's say that my file is named robot.java. In order to compile, I would execute "javac -cp RXTXRobot.jar robot.java", and to run it, execute "java -cp RXTXRobot.jar:. robot". Your file should succesfully work.
 
-### Method Explanation and Documentation
+## Method Explanation and Documentation
 
 These are all the methods available to you and a brief description of what they do.
 
-**------------------------------------------------General------------------------------------------------**
+### General
 
 **setPort(string)** - Sets the computer port where the arduino is connected to the computer.
 
@@ -36,7 +36,7 @@ These are all the methods available to you and a brief description of what they 
 
 **close()** - Closes the connection when you're done with using the robot. Should be done at the end of every program.
 
-**------------------------------------------------Sensors------------------------------------------------**
+### Sensors
 
 **refreshAnalogPins()** - Should be ran before calling the values from any analog pins.
 
@@ -52,7 +52,7 @@ These are all the methods available to you and a brief description of what they 
 
 **getIRChar()** - Returns the IR char detected by the IR sensor. Sensor must be connected to D4.
 
-**------------------------------------------------Movement------------------------------------------------**
+### Movement
 
 **runPCAServo(int channel, int position)** - Runs a 180 servo connected on a specific **channel** to a specific **position**.
 
@@ -76,6 +76,18 @@ These are all the methods available to you and a brief description of what they 
 
 **allPCAStop()** - Stops all the motors running on every channel.
 
+
+## More Help
+
+If something is confusing or not working, please reach out to one of the CS TA's and we will all gladly assist you:
+
+Traian Pop - tpop@smu.edu
+
+Remus Tumac - rtumac@smu.edu
+
+Mauricio Sifontes - msifontessal@smu.edu
+
+Lexie Hancock - hancockl@smu.edu
 
 
 
