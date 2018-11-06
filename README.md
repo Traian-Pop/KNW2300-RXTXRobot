@@ -76,6 +76,9 @@ These are all the methods available to you and a brief description of what they 
 
 **allPCAStop()** - Stops all the motors running on every channel.
 
+## Navigation .class file
+
+In order to use our provided Navigation class, we have provided a new example in Examples/ called Navigation.java. In addition, the .class file you need to import to your project is now on the GitHub too, named Navigation.class. Adding an external .class file to your project build path is simple, but varies between IDEs and command line, so a simple Google search should be able to resolve any issues you have. Reach out to a TA in case you are having issues and we will help. 
 
 ## More Help
 
