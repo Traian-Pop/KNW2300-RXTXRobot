@@ -6,28 +6,32 @@ import java.util.*;
 // could be embedded in a team's robot control code.
 // John Fattaruso 10/27/18
 
+//This particular example takes the angles as input in the "main" method argument section. 
+
 public class Example {
   public static void main(String args[]) {
     int retval;
     double[] soln;
     Navigation nav;
 
-// Give two doulbe objects as the angles to the Navigator object
-// The variables below are just examples, you will have the measure the actual ones
-    Double a = 0.0;
-    Double b = 100.0;
-
+    if (args.length != 2) {
+      System.err.println("Usage: Example <theta a in degrees> <theta b in degrees>");
+      return;
+    }
 // Create an instance of the Navigation object class
     nav = new Navigation();
-
 // The two beacon angle differences can be set and the solver run any number of times
-    nav.setThetaA(a);
-    nav.setThetaB(b);
-
+    nav.setAngles(Double.parseDouble(args[0]),Double.parseDouble(args[1]));
 // Run solver to find unknown robot coordinates
-// RETURN_RANGE, RETURN_SINGULAR, and RETURN_DIVERGENCE are error codes from our code, don't worry about them
+// RETURN_RANGE, RETURN_SUCCESS, RETURN_SINGULAR, and RETURN_DIVERGENCE are error codes from our code, don't worry about them
     retval = nav.newton_raphson();
-    if (retval == Navigation.RETURN_RANGE) {
+    if (retval == Navigation.RETURN_SUCCESS) {
+// Retrieve solution of coordinates
+      soln = nav.getSolution();
+      System.out.println("(x,y) coordinates of robot = (" +
+                         soln[0] + "," + soln[1] + ")");
+    }
+    else if (retval == Navigation.RETURN_RANGE) {
       System.err.println("Angle out of range");
     }
     else if (retval == Navigation.RETURN_SINGULAR) {
@@ -36,12 +40,6 @@ public class Example {
     else if (retval == Navigation.RETURN_DIVERGENCE) {
       System.err.println("Convergence failure in 100 iterations");
     }
-    else {
-
-// Retrieve solution of coordinates
-      soln = nav.getSolution();
-      System.out.println("(x,y) coordinates of robot = (" +
-                         soln[0] + "," + soln[1] + ")");
-    }
   }
 }
+
