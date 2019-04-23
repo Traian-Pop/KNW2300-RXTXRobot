@@ -46,7 +46,8 @@ These are all the methods available to you and a brief description of what they 
 
 **getDigitalPin(int)** - Returns the value from the specific pin called. 
 
-**getPing(int)** - Returns the value from the ping sensor at the specified pin. 
+**getPing(int)** - Returns the value from the ping sensor at the specified pin.
+Ping sensor works most consistently when connected to D10 or D11. 
 
 **getConductivity()** - Returns the value of the conductivity sensor if properly connected. Sensor should be connected to A2, A3, D12, D13.
 
@@ -66,12 +67,6 @@ These are all the methods available to you and a brief description of what they 
 
 **runTwoPCAMotor(int channel1, int speed1, int channel2, int speed2 int time)** - Runs two DC motors connected on **channel1** and **channel2** at the speeds of **speed1** and **speed2** for **time** milliseconds, respectively. If time is zero, it runs infinitely. 
 
-**runPCAEncoder(int channel, int speed, int pin, int ticks)** - Runs an encoder on **pin** connected to a motor on **channel** at **speed** for **ticks**.
-
-**runTwoPCAEncoder(int channel1, int speed1, int pin1, int ticks1, int channel2, int speed2, int pin2, int ticks2)** - Runs two encoders on **pin1** and **pin2** connected to motors on **channel1** and **channel2** at **speed1** and **speed2** for **ticks1** and **ticks2** respectively.
-
-**getPCAEncodedMotorsTicks(int channel)** - Returns the ticks from motor on **channel**.
-
 **channelPCAStop(int channel)** - Stops the motor runnning on **channel**.
 
 **allPCAStop()** - Stops all the motors running on every channel.
@@ -81,8 +76,6 @@ These are all the methods available to you and a brief description of what they 
 If something is confusing or not working, please reach out to one of the CS TA's and we will all gladly assist you:
 
 Traian Pop - tpop@smu.edu
-
-Remus Tumac - rtumac@smu.edu
 
 Mauricio Sifontes - msifontessal@smu.edu
 
